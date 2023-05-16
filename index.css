@@ -1,0 +1,110 @@
+html,
+body {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    background-color: #ebe8e4;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+div.container {
+    height: 70vh;
+    width: 55vw;
+    background-color: #fff;
+    border-radius: 10px 10px 80px 10px;
+    padding: 1em;
+    position: relative;
+
+}
+
+div.input-outside {
+
+    width: 90%;
+    height: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3em auto;
+    row-gap: 0.3em;
+    margin: 0 auto;
+    align-items: center;
+    justify-items: center;
+    margin-bottom: 1.5em;
+}
+
+.input {
+    width: 60%;
+    height: 2.8em;
+    border: 1px solid #D4D4D4;
+    border-radius: 5px;
+    align-self: self-start;
+
+}
+
+label {
+    justify-self: center;
+    font-family: 'Poppins', sans-serif;
+    align-self: self-end;
+    font-size: xx-small;
+    position: relative;
+    right: 1.4em;
+    top: 0.2em;
+}
+
+hr {
+    width: 70%;
+    color: #ebe8e4;
+
+}
+
+.icon-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    top: 31%;
+    left: 41%;
+    border-radius: 50%;
+    background-color: hsl(259, 100%, 65%);
+}
+
+.icon-arrow {
+
+    width: 2em;
+    height: 1.5em;
+}
+
+div.second-container {
+
+    height: 60%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    letter-spacing: 2px;
+}
+
+div.second-container>div {
+    margin-left: 2em;
+}
+
+
+h1 {
+    margin: 0.6em;
+}
+
+span {
+    margin-right: 0.2em;
+    font-size: 2.3rem;
+    color: hsl(259, 100%, 65%);
+}
