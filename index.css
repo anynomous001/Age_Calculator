@@ -2,6 +2,7 @@ html,
 body {
     margin: 0;
     border: 0;
+    height: 100%;
     box-sizing: border-box;
     background-color: #ebe8e4;
     font-family: 'Poppins', sans-serif;
@@ -17,8 +18,8 @@ main {
 }
 
 div.container {
-    height: 65vh;
-    width: 90%;
+    height: 75vh;
+    width: 80%;
     background-color: #fff;
     border-radius: 10px 10px 80px 10px;
     padding: 1em;
@@ -27,26 +28,35 @@ div.container {
 }
 
 div.input-outside {
-
+/*border: 1px solid;*/ 
     width: 90%;
-    height: 30%;
+    height: 7em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 3em auto;
+    grid-template-rows: 1em auto;
     row-gap: 0.3em;
     margin: 0 auto;
     align-items: center;
     justify-items: center;
-    margin-bottom: 1.5em;
+    
+   
 }
-
+div.input-outside >p{
+    font-size: 0.5em;
+   text-align: center;
+    margin: 1em auto;
+    color: red;
+    display: none;
+   
+}
 .input {
     width: 60%;
     height: 2.8em;
     border: 1px solid #D4D4D4;
     border-radius: 5px;
     align-self: self-start;
-
+    text-align: center;
+    font-weight: 600;
 }
 
 label {
@@ -58,11 +68,31 @@ label {
     right: 1.4em;
     top: 0.2em;
 }
+.invalid-color{
+    color: red;
+    border-color: red;
+}
+
+
+
+
 
 hr {
     width: 70%;
     color: #ebe8e4;
+    position: relative;
+    top: 1.45em;
+    
 
+}
+#invalid-day{
+    grid-column: 1/2;
+}
+#invalid-month{
+    grid-column: 2/3;
+}
+#invalid-year{
+    grid-column: 3/4;
 }
 
 .icon-div {
@@ -71,23 +101,21 @@ hr {
     align-items: center;
     width: 3em;
     height: 3em;
+    z-index: 1;
     position: absolute;
-    top: 31%;
+    top: 30%;
     left: 41%;
     border-radius: 50%;
     background-color: hsl(259, 100%, 65%);
-}
-
-.icon-arrow {
-
-    width: 2em;
-    height: 1.5em;
+    color: whitesmoke;
+    font-weight: 600;
+    border: none;
 }
 
 div.second-container {
 
     height: 60%;
-    margin: 0 auto;
+    margin: 1.5em auto;
     text-align: center;
     display: flex;
     align-items: center;
@@ -108,4 +136,127 @@ span {
     margin-right: 0.2em;
     font-size: 2.3rem;
     color: hsl(259, 100%, 65%);
+}
+#day,#month,#year{
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #6F6666;
+}
+
+@media(min-width:500px){
+    body{
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+    }
+    main{
+        width: 80%;
+        background-color: teal;
+        height: 90%;
+        
+    }
+    
+}
+
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #a69ecc;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 14s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+    left: 69%;
+    width: 266px;
+    height: 266px;
+    bottom: -266px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 39%;
+    width: 230px;
+    height: 230px;
+    bottom: -230px;
+    animation-delay: 5s;
+}
+.background li:nth-child(2) {
+    left: 61%;
+    width: 273px;
+    height: 273px;
+    bottom: -273px;
+    animation-delay: 10s;
+}
+.background li:nth-child(3) {
+    left: 21%;
+    width: 159px;
+    height: 159px;
+    bottom: -159px;
+    animation-delay: 1s;
+}
+.background li:nth-child(4) {
+    left: 76%;
+    width: 132px;
+    height: 132px;
+    bottom: -132px;
+    animation-delay: 9s;
+}
+.background li:nth-child(5) {
+    left: 65%;
+    width: 296px;
+    height: 296px;
+    bottom: -296px;
+    animation-delay: 14s;
+}
+.background li:nth-child(6) {
+    left: 63%;
+    width: 234px;
+    height: 234px;
+    bottom: -234px;
+    animation-delay: 13s;
+}
+.background li:nth-child(7) {
+    left: 32%;
+    width: 241px;
+    height: 241px;
+    bottom: -241px;
+    animation-delay: 21s;
+}
+.background li:nth-child(8) {
+    left: 81%;
+    width: 283px;
+    height: 283px;
+    bottom: -283px;
+    animation-delay: 13s;
 }
